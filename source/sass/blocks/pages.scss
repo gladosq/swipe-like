@@ -1,0 +1,45 @@
+.pages__wrapper {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  & h1 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  & p {
+    margin: 0;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 8px;
+
+    & a {
+      text-decoration: underline;
+    }
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
+
+  & a:active {
+    opacity: 0.6;
+  }
+}
+
+.pages__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 100px;
+}
+
+.pages__item {
+  font-size: 18px;
+  font-weight: 500;
+}

@@ -1,0 +1,249 @@
+.header__wrapper {
+  max-width: 1650px;
+  margin: auto;
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+
+  .header__catalog-button {
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $basic-white;
+    display: flex;
+    height: 34px;
+    align-items: center;
+    background: $basic-black;
+    padding: 10px 80px;
+    transition: background 0.3s;
+    box-shadow: 0px 2px 0px 0 transparent;
+
+    &:hover {
+      background: $basic-orange;
+      color: $basic-black;
+      transform: translateY(-2px);
+      box-shadow: -2px 2px 0px 0 $basic-black;
+      transition: transform 0.6s, background 0.3s, box-shadow 0.6s;
+    }
+
+    &:active {
+      transform: translateY(0px);
+      box-shadow: 0px 2px 0px 0 transparent;
+      transition: none;
+    }
+  }
+}
+
+.header__nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  grid-gap: 40px;
+}
+
+.header__nav-item {
+  & a {
+    display: flex;
+    min-height: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $basic-orange;
+
+      & svg {
+        transition: all 0.2s;
+        stroke: $basic-orange;
+      }
+    }
+  }
+
+  &:nth-child(3) a svg {
+    padding-top: 2px;
+  }
+
+  &:nth-child(4) a svg {
+    padding-top: 4px;
+  }
+
+  &.mobile-search {
+    display: none;
+  }
+}
+
+.header__cart-count {
+  display: none;
+}
+
+.header__form {
+  width: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .header__search-input {
+    width: 100%;
+    font-family: inherit;
+    border: 0;
+    border-bottom: 1px solid $basic-black;
+    font-size: 18px;
+    color: $basic-black;
+    padding: 6px 60px 6px 16px;
+    box-shadow: 0px 1px 0px 0 transparent;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+      box-shadow: 0px 1px 0px 0 $basic-black;
+    }
+
+    &:focus {
+      box-shadow: 0px 1px 0px 0 $basic-black;
+      outline: none;
+    }
+  }
+
+  .header__search-button {
+    position: absolute;
+    right: 16px;
+    top: 8px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover svg {
+      opacity: 0.5;
+    }
+
+    &:active svg {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .header__wrapper {
+    padding-bottom: 10px;
+    padding-top: 20px;
+
+    .header__catalog-button {
+      font-size: 16px;
+    }
+  }
+
+  .header__nav-list {
+    grid-gap: 60px;
+  }
+
+  .header__nav-item {
+    position: relative;
+
+    & a {
+      justify-content: center;
+
+      & span {
+        display: none;
+      }
+    }
+  }
+
+  .header__form {
+    .header__search-input {
+      padding-left: 10px;
+      padding-right: 40px;
+    }
+
+    .header__search-button {
+      top: 14px;
+      right: 2px;
+    }
+  }
+
+  .header__cart--active {
+    .header__cart-count {
+      display: flex;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: $basic-yellow;
+      top: 13px;
+      right: 0;
+      font-size: 11px;
+      font-weight: 600;
+      color: $basic-black;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .header__fav--active {
+    & svg {
+      fill: $basic-black;
+    }
+  }
+}
+
+
+@media (max-width: $mobile-width) {
+  .header__wrapper {
+    display: grid;
+    grid-template-areas: "catalog catalog" "form nav";
+    padding-top: 26px;
+
+    .header__catalog-button {
+      grid-area: catalog;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .header__form {
+    grid-area: form;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .header__nav-list {
+    grid-area: nav;
+    margin-left: 34px;
+  }
+}
+
+@media (max-width: $half-mobile-width) {
+  .header__wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: "catalog" "nav";
+
+    .header__catalog-button {
+      margin-bottom: 6px;
+    }
+  }
+
+  .header__nav-item {
+    &.mobile-search {
+      display: block;
+    }
+  }
+
+  .header__form {
+    display: none;
+  }
+
+  .header__nav-list {
+    margin-left: 0;
+    grid-gap: 0;
+
+    justify-content: space-between;
+
+  }
+
+}

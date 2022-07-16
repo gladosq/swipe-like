@@ -1,0 +1,156 @@
+.workout__wrapper {
+  max-width: 1650px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 80px;
+
+  & h1 {
+    font-weight: 600;
+    font-size: 48px;
+    text-transform: uppercase;
+    line-height: 66px;
+    letter-spacing: -0.03em;
+    margin-bottom: 0;
+    margin-bottom: 40px;
+  }
+
+  & button {
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $basic-black;
+    background: $basic-orange;
+    padding: 10px 40px;
+    transition: background 0.3s;
+    box-shadow: 0px 2px 0px 0 transparent;
+    font-family: inherit;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+      background: $basic-orange;
+      color: $basic-black;
+      transform: translateY(-2px);
+      box-shadow: -2px 2px 0px 0 $basic-black;
+      transition: transform 0.6s, background 0.3s, box-shadow 0.6s;
+    }
+
+    &:active {
+      transform: translateY(0px);
+      box-shadow: 0px 2px 0px 0 transparent;
+      transition: none;
+    }
+  }
+}
+
+.workout__list {
+  padding-left: 22px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.workout__item {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.workout__mobile-image-wrapper {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .workout__wrapper {
+    padding-bottom: 54px;
+
+    & h1 {
+      font-size: 36px;
+      margin-top: 0;
+      line-height: 34px;
+    }
+  }
+
+  .workout__list {
+    margin-top: 34px;
+  }
+
+  .workout__item {
+    margin-bottom: 16px;
+    line-height: 120%;
+  }
+
+  .workout__mobile-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 327px;
+    background: $basic-green;
+    position: relative;
+
+    & svg {
+      padding-bottom: 70px;
+    }
+
+    .workout__title-wrapper {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: $basic-black;
+
+      & span {
+        color: $basic-white;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 24px;
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .workout__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+
+    & h1 {
+      font-size: 26px;
+      line-height: 36px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    & button {
+      display: none;
+    }
+  }
+
+  .workout__mobile-image-wrapper {
+    margin-top: 42px;
+    order: -1;
+    height: 282px;
+
+    .workout__title-wrapper {
+      display: none;
+    }
+
+    & svg {
+      width: 240px;
+      padding-bottom: 0;
+    }
+  }
+
+  .workout__list {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .workout__item {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}

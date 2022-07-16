@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Swipe-like">
+  <meta name="keywords" content="Swipe-like">
+  <title>Swipe&Like</title>
+  <link rel="preload" href="fonts/manrope-400.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/manrope-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/manrope-600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/manrope-800.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+</head>
+<body class="page-body">
+  <header class="header">
+    <div class="header__wrapper">
+      <a class="header__catalog-button" href="#">Каталог</a>
+      <form class="header__form" action="" method="post">
+        <input class="visually-hidden" type="text">
+        <input class="header__search-input" type="text" placeholder="Я ищу...">
+        <button class="header__search-button" type="submit">
+          <svg width="26" height="27" viewBox="0 0 26 27" fill="none" stroke="#000000">
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </form>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item mobile-search">
+            <a href="#">
+              <svg width="26" height="27" viewBox="0 0 26 27" fill="none" stroke="#000000">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+              <span></span>
+            </a>
+          </li>
+          <li class="header__nav-item header__cart--active">
+            <a href="#">
+              <svg width="32" height="29" viewBox="0 0 32 29" fill="none" stroke="#000000">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+              <span>Корзина</span>
+              <div class="header__cart-count">1</div>
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">
+              <svg width="26" height="27" viewBox="0 0 26 27" fill="none" stroke="#000000">
+                <use xlink:href="img/sprite.svg#profile"></use>
+              </svg>
+              <span>Профиль</span>
+            </a>
+          </li>
+          <li class="header__nav-item header__fav--active">
+            <a href="#">
+              <svg width="34" height="28" viewBox="0 0 30 26" fill="none" stroke="black">
+                <use xlink:href="img/sprite.svg#fav"></use>
+              </svg>
+              <span>Нравится</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="breadcrumbs">
+      <div class="breadcrumbs__wrapper">
+        <div class="breadcrumbs__decoration-wrapper">
+          <a href="#">Главная</a>
+        </div>
+        <div class="breadcrumbs__decoration-wrapper">
+          <a href="#">Умная площадка</a>
+        </div>
+      </div>
+    </section>
+    <section class="object">
+      <div class="object__wrapper">
+        <h1>Умная спортивная площадка по приказу №107 от 23.03.2022</h1>
+        <p>Уличная площадка с тренажерным комплексом из 21 тренажера.<span class="object__non-mobile-caption">Для иллюстрации упражнений лучше конечно использовать анимацию, пусть и простую. Сможем ли мы получить исходники изображений в векторе (svg)? Нам так было бы удобнее делать анимацию. Размер изображений для разных упражнений должен быть одинаковый по размеру и пропорциям. Для каждого изображений одного упражнения - оборудование должно быть неподвижно и находиться в одном месте</span></p>
+        <button>Оборудование в каталоге</button>
+      </div>
+    </section>
+    <section class="usability">
+      <div class="usability__wrapper">
+        <ul class="usability__list">
+          <li class="usability__item">
+            <a href="#">
+              <img src="img/usability-1.png" width="529" height="287" alt="Изображение девушки, выполняющей упражнение">
+              <div class="usability__item-title">
+                <div class="usability__item-svg-wrapper">
+                  <svg width="23" height="25" viewBox="0 0 23 25" fill="white">
+                    <use xlink:href="img/sprite.svg#usability"></use>
+                  </svg>
+                </div>
+                <div class="usability__item-caption">
+                  <h2>Разминка</h2>
+                  <p>10-15 мин. 18 упражнений</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="usability__item">
+            <a href="#">
+              <img src="img/usability-2.png" width="529" height="287" alt="Фотография спортивной площадки">
+              <div class="usability__item-title">
+                <div class="usability__item-svg-wrapper">
+                  <svg width="23" height="25" viewBox="0 0 23 25" fill="white">
+                    <use xlink:href="img/sprite.svg#usability"></use>
+                  </svg>
+                </div>
+                <div class="usability__item-caption">
+                  <h2>Программа 1</h2>
+                  <p>3 недели | 6 упражнений</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="usability__item">
+            <a href="#">
+              <img src="img/usability-3.png" width="529" height="287" alt="Фотография спортивной площадки">
+              <div class="usability__item-title">
+                <div class="usability__item-svg-wrapper">
+                  <svg width="23" height="25" viewBox="0 0 23 25" fill="white">
+                    <use xlink:href="img/sprite.svg#usability"></use>
+                  </svg>
+                </div>
+                <div class="usability__item-caption">
+                  <h2>Программа 2</h2>
+                  <p>6 недель | 10 упражнений</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="overlay hidden"></section>
+  </main>
+  <footer class="footer" id="footer">
+
+  </footer>
+<!--   <script src="js/main.js"></script> -->
+</body>
+</html>

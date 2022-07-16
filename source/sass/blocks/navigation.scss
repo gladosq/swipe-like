@@ -1,0 +1,68 @@
+.navigation__wrapper {
+  max-width: 1650px;
+  margin: auto;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  & button {
+    position: absolute;
+    right: 0;
+    background: $basic-orange;
+    font-family: inherit;
+    font-size: 14px;
+    padding-left: 36px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 20px;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    transition: padding-left 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 7px;
+      top: 11px;
+      background: transparent;
+      border-left: 2px solid black;
+      border-bottom: 2px solid black;
+      transform: rotate(45deg);
+      border-radius: 1px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      top: 15px;
+      left: 6px;
+      background: black;
+    }
+
+    &:hover {
+      padding-left: 50px;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media (max-width: $half-mobile-width) {
+  .navigation__wrapper {
+    padding-top: 10px;
+    padding-bottom: 4px;
+
+    & button {
+      right: auto;
+      left: 0;
+      margin-left: 20px;
+    }
+  }
+}
